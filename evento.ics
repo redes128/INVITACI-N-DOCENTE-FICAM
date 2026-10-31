@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//UTP//Cena Docente//ES
+BEGIN:VEVENT
+UID:cena-utp-20261103@utp
+DTSTAMP:20261031T120000Z
+DTSTART;TZID=America/La_Paz:20261103T190000
+DTEND;TZID=America/La_Paz:20261103T220000
+SUMMARY:Cena de Confraternización y Presentación de Propuestas – UTP
+LOCATION:Restaurant Bizantino del Grand Hotel, Calle Aniceto Arce N° 61, Sucre
+DESCRIPTION:Ubicación: https://maps.app.goo.gl/tk64wmaX5oApRNy97
+URL:https://maps.app.goo.gl/tk64wmaX5oApRNy97
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Cena UTP hoy a las 19:00
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Invitación Especial · Cena de Confraternización Docente UTP</title>
+<meta name="description" content="Martes 3 de noviembre · 19:00 · Restaurant Bizantino del Grand Hotel, Sucre. Presentación del Plan de Trabajo del frente UTP – Unidos Todo Podemos.">
+<!--OG-->
+<meta property="og:title" content="Ing. Sergio Alejandro Vargas Herrera · Invitación Especial UTP">
+<meta property="og:description" content="Martes 3 de noviembre · 19:00 · Restaurant Bizantino del Grand Hotel, Sucre">
+<meta property="og:image" content="https://gian86s.github.io/cena-utp/p/03d72f137e.jpg">
+<meta property="og:url" content="https://gian86s.github.io/cena-utp/inv-03d72f137e.html">
+<!--/OG-->
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#020b35">
+<link rel="icon" href="img/logo-700.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800;1,900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#020b35;--navy2:#041255;--ink:#010622;--blue:#0b3ee0;--orange:#ff7a00;--gold:#e2b866;--gold2:#f7e3a3;--cream:#f6efe2;--muted:#aab6de;
+  --line:rgba(226,184,102,.32);
+  --foil:linear-gradient(100deg,#a8792a 0%,#f7e3a3 22%,#c99a3e 42%,#fff3c9 58%,#b88a35 78%,#f1d58e 100%);
+  --ease:cubic-bezier(.22,1,.36,1);
+  --pad:clamp(18px,5vw,48px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:Poppins,system-ui,sans-serif;color:#fff;background:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden;font-variant-numeric:lining-nums}
+body.locked{overflow:hidden;height:100svh}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.wrap{width:min(1180px,100%);margin:0 auto;padding:0 var(--pad)}
+.serif{font-family:"Cormorant Garamond",serif}
+.foil{background:var(--foil);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.script{font-family:"Great Vibes",cursive;font-weight:400}
+
+/* ============ INTRO ============ */
+#intro{position:fixed;inset:0;z-index:100;display:grid;place-items:center;overflow:hidden;
+  background:radial-gradient(900px 700px at 50% 35%,#0a2380 0%,#031056 40%,#010622 100%)}
+#intro canvas{position:absolute;inset:0;width:100%;height:100%}
+#intro .curtain{position:absolute;top:0;bottom:0;width:50.5%;background:inherit;z-index:0;transition:transform 1.2s var(--ease)}
+#intro .curtain.l{left:0;background:linear-gradient(90deg,#010622,#031056)}
+#intro .curtain.r{right:0;background:linear-gradient(270deg,#010622,#031056)}
+#intro.bye .curtain.l{transform:translateX(-101%)}
+#intro.bye .curtain.r{transform:translateX(101%)}
+#intro.bye .stage,#intro.bye canvas,#intro.bye .skip{opacity:0;transform:scale(1.08);transition:.7s var(--ease)}
+#intro.gone{display:none}
+.stage{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px;width:100%}
+.i-line{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);transition:width 1.1s var(--ease)}
+.s1 .i-line{width:min(420px,70vw)}
+.i-logo{position:relative;width:min(260px,58vw);margin:22px 0 10px;opacity:0;transform:translateY(14px) scale(.94);transition:1s var(--ease)}
+.s2 .i-logo{opacity:1;transform:none}
+.i-logo::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.75) 50%,transparent 65%);
+  background-size:250% 100%;background-position:150% 0;-webkit-mask:url(img/logo-700.png) center/contain no-repeat;mask:url(img/logo-700.png) center/contain no-repeat}
+.s2 .i-logo::after{animation:sweep 1.6s .5s var(--ease) forwards}
+@keyframes sweep{to{background-position:-60% 0}}
+.i-to{opacity:0;transform:translateY(10px);transition:.9s var(--ease)}
+.s3 .i-to{opacity:1;transform:none}
+.i-to small{display:block;font-size:12px;letter-spacing:6px;text-transform:uppercase;color:var(--gold)}
+.i-to .who{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:clamp(26px,6vw,46px);line-height:1.15;margin-top:4px}
+.i-to .who span{display:inline-block;opacity:0;transform:translateY(.4em);filter:blur(6px);transition:.6s var(--ease)}
+.s3 .i-to .who span{opacity:1;transform:none;filter:none}
+
+/* envelope */
+.env{position:relative;width:min(340px,80vw);aspect-ratio:1.45;margin-top:34px;opacity:0;transform:translateY(40px) rotateX(18deg);transition:1s var(--ease);perspective:1200px}
+.s4 .env{opacity:1;transform:none}
+.env-back,.env-front,.env-flap{position:absolute;inset:0}
+.env-back{border-radius:8px;background:linear-gradient(160deg,#0d2a8c,#06175e);box-shadow:0 30px 70px rgba(0,0,0,.6),inset 0 0 0 1px rgba(226,184,102,.35)}
+.env-card{position:absolute;left:6%;right:6%;top:7%;height:88%;border-radius:6px;background:linear-gradient(180deg,#071a66,#020b35);
+  border:1px solid rgba(226,184,102,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;transition:transform 1.1s var(--ease) .35s;z-index:1}
+.env-card .mini{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:clamp(20px,5vw,28px);line-height:1}
+.env-card small{font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+.env-card .av{width:58px;height:58px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:2px solid var(--gold);display:none}
+.env-front{z-index:2;border-radius:0 0 8px 8px;pointer-events:none;
+  background:
+    linear-gradient(to top right,#0a2378 49.6%,transparent 50%) left bottom/50.2% 100% no-repeat,
+    linear-gradient(to top left,#0a2378 49.6%,transparent 50%) right bottom/50.2% 100% no-repeat}
+.env-front::after{content:"";position:absolute;left:0;right:0;bottom:0;height:56%;background:linear-gradient(180deg,#0c2a8a,#08206f);clip-path:polygon(0 100%,0 30%,50% 0,100% 30%,100% 100%)}
+.env-flap{z-index:3;height:60%;transform-origin:top center;transition:transform .9s var(--ease),z-index 0s .45s;
+  background:linear-gradient(180deg,#0e2f9a,#0a2378);clip-path:polygon(0 0,100% 0,50% 100%);border-radius:8px 8px 0 0}
+.env-flap::after{content:"";position:absolute;inset:0;clip-path:polygon(0 0,100% 0,50% 100%);background:linear-gradient(180deg,rgba(226,184,102,.25),transparent 40%)}
+.seal{position:absolute;z-index:4;left:50%;top:60%;width:78px;height:78px;margin:-39px 0 0 -39px;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 30%,#ffb057,#ff7a00 45%,#b84f00 100%);box-shadow:0 8px 20px rgba(0,0,0,.5),inset 0 -4px 10px rgba(0,0,0,.3),inset 0 3px 6px rgba(255,255,255,.35);
+  transition:transform .5s var(--ease),opacity .5s;animation:pulse 2s infinite}
+.seal svg{width:38px;height:38px;filter:drop-shadow(0 1px 1px rgba(0,0,0,.35))}
+.seal::before{content:"";position:absolute;inset:6px;border-radius:50%;border:1.5px dashed rgba(255,255,255,.45)}
+@keyframes pulse{0%,100%{box-shadow:0 8px 20px rgba(0,0,0,.5),0 0 0 0 rgba(255,122,0,.55)}60%{box-shadow:0 8px 20px rgba(0,0,0,.5),0 0 0 18px rgba(255,122,0,0)}}
+.tap{margin-top:22px;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold2);opacity:0;transition:.6s .4s}
+.s4 .tap{opacity:1;animation:blink 2.2s 1.2s infinite}
+@keyframes blink{50%{opacity:.45}}
+.open .seal{transform:scale(1.6);opacity:0;animation:none}
+.open .env-flap{transform:rotateX(180deg);z-index:0}
+.open .env-card{transform:translateY(-58%)}
+.open .tap{opacity:0;animation:none}
+.skip{position:absolute;z-index:3;right:max(18px,env(safe-area-inset-right));top:max(16px,env(safe-area-inset-top));font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);padding:8px 14px;border:1px solid rgba(255,255,255,.15);border-radius:999px}
+.skip:hover{color:#fff;border-color:#fff}
+
+/* ============ NAV ============ */
+nav{position:fixed;inset:0 0 auto;z-index:50;transition:.4s var(--ease)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+nav.solid{background:rgba(2,11,53,.78);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);box-shadow:0 1px 0 rgba(255,255,255,.06)}
+nav .brand img{height:42px;width:auto}
+nav .links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+nav .links a{position:relative;transition:color .2s}
+nav .links a::after{content:"";position:absolute;left:0;bottom:-6px;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .3s var(--ease)}
+nav .links a:hover{color:#fff}
+nav .links a:hover::after{transform:scaleX(1)}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.15);place-items:center}
+.burger i{display:block;width:18px;height:1.5px;background:#fff;position:relative;transition:.3s}
+.burger i::before,.burger i::after{content:"";position:absolute;left:0;width:100%;height:100%;background:#fff;transition:.3s}
+.burger i::before{top:-6px}.burger i::after{top:6px}
+.menu-open .burger i{background:transparent}
+.menu-open .burger i::before{top:0;transform:rotate(45deg)}
+.menu-open .burger i::after{top:0;transform:rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:49;background:rgba(1,6,34,.96);backdrop-filter:blur(10px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;
+  opacity:0;pointer-events:none;transition:.4s var(--ease)}
+.drawer a{font-family:"Cormorant Garamond",serif;font-size:34px;font-weight:600;transform:translateY(12px);transition:.5s var(--ease)}
+.menu-open .drawer{opacity:1;pointer-events:auto}
+.menu-open .drawer a{transform:none}
+
+/* ============ BUTTONS ============ */
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:600;font-size:15px;
+  border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.05);transition:transform .3s var(--ease),background .3s,border-color .3s,box-shadow .3s;white-space:nowrap}
+.btn::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .7s var(--ease)}
+.btn:hover::after{left:140%}
+.btn:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.35)}
+.btn.primary{background:linear-gradient(135deg,#ff9426,var(--orange) 50%,#e56400);border-color:transparent;box-shadow:0 12px 30px rgba(255,122,0,.35)}
+.btn.gold{background:var(--foil);color:#2a1a00;border-color:transparent;box-shadow:0 12px 30px rgba(226,184,102,.25)}
+.btn svg{width:18px;height:18px;flex:none}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:110px 0 70px;overflow:hidden;isolation:isolate}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.aurora{position:absolute;inset:-20%;z-index:-2;filter:blur(60px);opacity:.9}
+.aurora i{position:absolute;border-radius:50%;animation:drift 18s ease-in-out infinite alternate}
+.aurora i:nth-child(1){width:55vw;height:55vw;left:5%;top:0;background:radial-gradient(closest-side,rgba(20,70,255,.55),transparent)}
+.aurora i:nth-child(2){width:45vw;height:45vw;right:0;top:20%;background:radial-gradient(closest-side,rgba(255,122,0,.28),transparent);animation-duration:22s}
+.aurora i:nth-child(3){width:40vw;height:40vw;left:30%;bottom:-5%;background:radial-gradient(closest-side,rgba(226,184,102,.18),transparent);animation-duration:26s}
+@keyframes drift{to{transform:translate(6vw,4vh) scale(1.15)}}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,70px);align-items:center}
+.kick{display:inline-flex;align-items:center;gap:12px;font-size:12px;letter-spacing:5px;text-transform:uppercase;color:var(--gold)}
+.kick i{width:34px;height:1px;background:var(--gold)}
+.hero h1{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(44px,6.4vw,92px);line-height:.98;margin:16px 0 14px;letter-spacing:-.5px}
+.hero h1 em{font-style:italic;display:block}
+.hello{font-size:clamp(15px,1.6vw,18px);color:var(--muted);margin-bottom:6px}
+.hello b{display:block;font-family:"Cormorant Garamond",serif;font-size:clamp(26px,3.4vw,40px);line-height:1.1;font-weight:700;margin-top:2px}
+.lead{font-size:clamp(15px,1.5vw,18px);color:#dfe5fb;max-width:560px;font-weight:300}
+.lead b{color:#fff;font-weight:600}
+.facts{display:flex;gap:0;margin:28px 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);max-width:560px}
+.facts>div{flex:1;padding:14px 10px;text-align:center}
+.facts>div+div{border-left:1px solid var(--line)}
+.facts small{display:block;font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+.facts b{display:block;font-family:"Cormorant Garamond",serif;font-weight:700;font-size:clamp(26px,3vw,38px);line-height:1.1}
+.facts .hi b{color:var(--orange)}
+.facts span{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.count{display:flex;gap:10px;margin-top:26px}
+.count>div{width:clamp(62px,7vw,80px);padding:10px 0 8px;border-radius:14px;text-align:center;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(6px)}
+.count b{display:block;font-size:clamp(22px,2.6vw,30px);font-weight:700;line-height:1.1;font-variant-numeric:tabular-nums}
+.count b.tick{animation:tick .45s var(--ease)}
+@keyframes tick{from{transform:translateY(-35%);opacity:.2}}
+.count small{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+.count-msg{margin-top:22px;font-size:20px;display:none}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+
+.card3d{position:relative;perspective:1400px;justify-self:center;width:min(420px,100%)}
+.card3d .inner{position:relative;border-radius:18px;transform-style:preserve-3d;transition:transform .25s ease-out;animation:float 7s ease-in-out infinite}
+.card3d img{border-radius:18px;box-shadow:0 40px 90px rgba(0,0,0,.65),0 0 0 1px rgba(226,184,102,.35)}
+.card3d .glare{position:absolute;inset:0;border-radius:18px;pointer-events:none;mix-blend-mode:overlay;
+  background:radial-gradient(600px circle at var(--gx,30%) var(--gy,20%),rgba(255,255,255,.45),transparent 40%)}
+.card3d .halo{position:absolute;inset:-12%;z-index:-1;background:radial-gradient(closest-side,rgba(226,184,102,.25),transparent);filter:blur(20px)}
+@keyframes float{50%{transform:translateY(-12px)}}
+.scroll-hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);width:26px;height:42px;border:1.5px solid rgba(255,255,255,.35);border-radius:14px}
+.scroll-hint::after{content:"";position:absolute;left:50%;top:8px;width:3px;height:8px;margin-left:-1.5px;border-radius:2px;background:var(--gold);animation:sh 1.8s infinite}
+@keyframes sh{70%{transform:translateY(12px);opacity:0}}
+
+/* ============ MARQUEE ============ */
+.marquee{overflow:hidden;border-block:1px solid rgba(255,255,255,.06);background:linear-gradient(90deg,#06175e,#0b3ee0 50%,#06175e);padding:14px 0}
+.marquee .track{display:flex;gap:28px;width:max-content;animation:mq 30s linear infinite}
+.marquee span{font-weight:900;font-style:italic;text-transform:uppercase;font-size:clamp(14px,1.6vw,18px);white-space:nowrap;display:flex;align-items:center;gap:28px}
+.marquee span::after{content:"✦";color:var(--orange);font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ============ SECTIONS ============ */
+section{position:relative;padding:clamp(70px,10vw,120px) 0}
+.sec-k{font-size:12px;letter-spacing:6px;text-transform:uppercase;color:var(--orange);font-weight:600;text-align:center}
+.sec-t{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(34px,5vw,58px);text-align:center;line-height:1.05;margin:8px auto clamp(30px,5vw,54px);max-width:800px}
+.alt{background:linear-gradient(180deg,var(--navy2),var(--navy))}
+.orn{display:flex;align-items:center;justify-content:center;gap:12px;margin:-28px 0 44px}
+.orn i{width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.orn i:last-child{transform:scaleX(-1)}
+.orn span{width:8px;height:8px;background:var(--orange);transform:rotate(45deg)}
+
+/* details */
+.details{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.det{position:relative;padding:30px 26px;border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);overflow:hidden;transition:transform .5s var(--ease),border-color .4s}
+.det:hover{transform:translateY(-6px);border-color:var(--line)}
+.det::before{content:"";position:absolute;inset:auto -30% -60% auto;width:220px;height:220px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,122,0,.18),transparent)}
+.det .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:rgba(226,184,102,.12);color:var(--gold2);margin-bottom:18px}
+.det .ic svg{width:26px;height:26px}
+.det small{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+.det b{display:block;font-family:"Cormorant Garamond",serif;font-size:clamp(30px,3.4vw,40px);font-weight:700;line-height:1.1;margin:4px 0}
+.det p{color:var(--muted);font-size:14px}
+
+/* quote */
+.quote{text-align:center;max-width:900px;margin:0 auto}
+.quote .q{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:500;font-size:clamp(28px,4.4vw,52px);line-height:1.2}
+.quote .q em{font-style:inherit;color:var(--gold2)}
+.quote .by{margin-top:22px;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--muted)}
+
+/* place */
+.place{display:grid;grid-template-columns:1fr 1.25fr;gap:22px}
+.place .info{border-radius:22px;padding:clamp(24px,3vw,36px);background:linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid var(--line);display:flex;flex-direction:column;gap:18px}
+.place h3{font-family:"Cormorant Garamond",serif;font-size:clamp(30px,3.4vw,40px);line-height:1.05;font-weight:700}
+.row{display:flex;gap:14px;align-items:flex-start;color:#dfe5fb}
+.row svg{width:22px;height:22px;flex:none;margin-top:2px;color:var(--orange)}
+.place .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.map{border-radius:22px;overflow:hidden;min-height:360px;border:1px solid var(--line);position:relative;background:#06134a}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.85) contrast(1.05)}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.cand{position:relative;border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#0a2275 0%,#041152 70%);border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;transition:transform .6s var(--ease),box-shadow .6s}
+.cand:hover{transform:translateY(-8px);box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.cand.dec{border-color:var(--line);box-shadow:0 0 0 1px rgba(226,184,102,.25),0 30px 70px rgba(0,0,0,.35)}
+.cand .ph{height:clamp(300px,32vw,380px);display:flex;justify-content:center;overflow:hidden;
+  background:radial-gradient(closest-side at 50% 70%,rgba(30,80,255,.6),transparent),repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 1px,transparent 1px 16px)}
+.cand .ph img{width:58%;margin-top:22px;transition:transform .8s var(--ease);filter:drop-shadow(0 16px 20px rgba(0,0,0,.55))}
+.cand:hover .ph img{transform:scale(1.05) translateY(-6px)}
+.cand .bd{padding:18px 22px 26px;text-align:center;margin-top:-56px;background:linear-gradient(180deg,transparent,#041152 34%);position:relative;flex:1;display:flex;flex-direction:column;align-items:center}
+.cand h3{font-size:19px;line-height:1.25;font-weight:600}
+.role{display:inline-block;margin:10px 0 18px;font-weight:800;font-style:italic;text-transform:uppercase;font-size:12px;background:var(--blue);padding:5px 12px;border-radius:4px;line-height:1.25}
+.cand.dec .role{background:var(--orange)}
+.cand .btn{margin-top:auto;font-size:14px;padding:12px 20px}
+
+/* downloads */
+.dl{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.dl a{display:flex;gap:16px;align-items:center;padding:18px 20px;border-radius:18px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);transition:.35s var(--ease)}
+.dl a:hover{border-color:var(--orange);background:rgba(255,122,0,.08);transform:translateY(-3px)}
+.dl a.mine{border-color:var(--line);background:linear-gradient(135deg,rgba(226,184,102,.16),rgba(226,184,102,.04))}
+.dl .ic{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:rgba(255,122,0,.15);color:var(--orange);font-weight:800;font-size:12px;flex:none}
+.dl a.mine .ic{background:var(--foil);color:#2a1a00}
+.dl b{display:block;font-size:15px;line-height:1.3}
+.dl small{color:var(--muted);font-size:12px}
+
+footer{padding:60px 0 calc(110px + env(safe-area-inset-bottom));text-align:center;color:var(--muted);font-size:13px;border-top:1px solid rgba(255,255,255,.06);background:var(--ink)}
+footer img{height:64px;width:auto;margin:0 auto 16px}
+footer .slogan{font-family:"Great Vibes",cursive;font-size:clamp(34px,5vw,48px);color:var(--gold2);line-height:1.2;margin-bottom:8px}
+
+/* sticky mobile bar */
+.mbar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:40;display:none;gap:8px;padding:8px;border-radius:20px;
+  background:rgba(2,11,53,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.1);box-shadow:0 14px 40px rgba(0,0,0,.5);
+  transform:translateY(140%);transition:transform .5s var(--ease)}
+.mbar.show{transform:none}
+.mbar a,.mbar button{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 4px;border-radius:14px;font-size:11px;font-weight:600}
+.mbar a:first-child{background:var(--orange)}
+.mbar svg{width:20px;height:20px}
+
+/* cursor glow (desktop) */
+.glow{position:fixed;left:0;top:0;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;pointer-events:none;z-index:1;
+  background:radial-gradient(closest-side,rgba(226,184,102,.08),transparent);transition:opacity .4s;opacity:0}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.split .w{display:inline-block;overflow:hidden;vertical-align:top}
+.split .w>span{display:inline-block;transform:translateY(105%);transition:transform 1s var(--ease);transition-delay:calc(var(--i)*55ms)}
+.split.in .w>span{transform:none}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero .kick,.hero .btns,.count{justify-content:center}
+  .lead,.facts{margin-left:auto;margin-right:auto}
+  .card3d{width:min(360px,86%);order:-1;margin-bottom:6px}
+  .details{grid-template-columns:1fr 1fr}
+  .details .det:last-child{grid-column:1/-1}
+  .place{grid-template-columns:1fr}
+  .team{grid-template-columns:repeat(3,1fr);gap:14px}
+  .cand h3{font-size:16px}
+}
+@media (max-width:768px){
+  nav .links,nav .cta{display:none}
+  .burger{display:grid}
+  .mbar{display:flex}
+  .hero{padding-top:96px}
+  .card3d{width:min(300px,78%)}
+  .details{grid-template-columns:1fr}
+  .team{grid-template-columns:1fr;max-width:420px;margin:0 auto}
+  .cand.dec{order:-1}
+  .hero .btns .btn{flex:1 1 100%}
+  .scroll-hint{display:none}
+}
+@media (max-width:380px){.count>div{width:58px}.facts b{font-size:24px}}
+@media (pointer:fine){.glow{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="locked">
+<script>window.INV={"nombre": "Ing. Sergio Alejandro Vargas Herrera", "genero": "M", "numero": 76, "foto": "data:image/jpeg;base64,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", "img": "p/03d72f137e.jpg"};</script><!--INV-->
+
+<!-- ============ INTRO ============ -->
+<div id="intro" aria-hidden="true">
+  <div class="curtain l"></div><div class="curtain r"></div>
+  <canvas id="introDust"></canvas>
+  <button class="skip" id="skip">Saltar intro</button>
+  <div class="stage" id="stage">
+    <div class="i-line"></div>
+    <img class="i-logo" src="img/logo-700.png" alt="">
+    <div class="i-to"><small id="iFor">Una invitación especial para</small><div class="who" id="iWho">la Comunidad Docente FICAM</div></div>
+    <div class="env" id="env">
+      <div class="env-back"></div>
+      <div class="env-card"><img class="av" id="iAv" alt=""><small>Cena UTP</small><div class="mini foil">Invitación Especial</div><small>03 · Nov · 19:00</small></div>
+      <div class="env-front"></div>
+      <div class="env-flap"></div>
+      <button class="seal" id="seal" aria-label="Abrir invitación"><svg viewBox="0 0 24 24"><path d="M3 12.5l5.5 5.5L21 5.5" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+    <div class="tap">Toque el sello para abrir</div>
+  </div>
+</div>
+
+<div class="glow" id="glow"></div>
+
+<!-- ============ NAV ============ -->
+<nav id="nav"><div class="wrap">
+  <a href="#top" class="brand" aria-label="UTP – Unidos Todo Podemos"><img src="img/logo-700.png" alt="UTP"></a>
+  <div class="links"><a href="#detalles">Detalles</a><a href="#lugar">Ubicación</a><a href="#candidatos">Candidatos</a><a href="#descargas">Descargas</a></div>
+  <a class="btn primary cta" href="https://maps.app.goo.gl/tk64wmaX5oApRNy97" target="_blank" rel="noopener" style="padding:11px 18px;font-size:14px">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Cómo llegar</a>
+  <button class="burger" id="burger" aria-label="Menú"><i></i></button>
+</div></nav>
+<div class="drawer" id="drawer"><a href="#detalles">Detalles</a><a href="#lugar">Ubicación</a><a href="#candidatos">Candidatos</a><a href="#descargas">Descargas</a></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="aurora"><i></i><i></i><i></i></div>
+  <canvas id="dust"></canvas>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="kick rv"><i></i><span id="hKick">FICAM · Claustro 2026</span><i></i></div>
+      <div class="hello rv" id="hello" style="--d:.1s;display:none"><span id="hSal">Estimado colega docente</span><b class="foil" id="hName"></b></div>
+      <h1 class="rv" style="--d:.15s"><span class="foil">Invitación</span><em class="foil">Especial</em></h1>
+      <p class="lead rv" style="--d:.25s">Los candidatos del frente <b>UTP – Unidos Todo Podemos</b> tienen el agrado de invitarle a la <b>Cena de Confraternización y Presentación de Propuestas</b>.</p>
+      <div class="facts rv" style="--d:.35s">
+        <div><small>Martes</small><b>03 Nov</b><span>2026</span></div>
+        <div class="hi"><small>Hora</small><b>19:00</b><span>horas</span></div>
+        <div><small>Lugar</small><b>Bizantino</b><span>Grand Hotel</span></div>
+      </div>
+      <div class="count rv" id="count" style="--d:.45s">
+        <div><b id="cd">0</b><small>días</small></div><div><b id="ch">00</b><small>horas</small></div>
+        <div><b id="cm">00</b><small>min</small></div><div><b id="cs">00</b><small>seg</small></div>
+      </div>
+      <div class="count-msg serif foil" id="countMsg">¡Gracias por acompañarnos esta noche!</div>
+      <div class="btns rv" style="--d:.55s">
+        <a class="btn primary" href="https://maps.app.goo.gl/tk64wmaX5oApRNy97" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Cómo llegar (GPS)</a>
+        <a class="btn" href="evento.ics" download="Cena-UTP-3-nov.ics">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>Agendar</a>
+        <a class="btn gold" id="dlInv" href="invitacion.png" download="Invitacion-Cena-UTP.png">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg><span id="dlInvT">Descargar invitación</span></a>
+      </div>
+    </div>
+    <div class="card3d rv" id="card3d" style="--d:.2s">
+      <div class="halo"></div>
+      <div class="inner" id="cardIn"><img id="invImg" src="invitacion.png" alt="Invitación digital" width="1080" height="1920"><div class="glare"></div></div>
+    </div>
+  </div>
+  <a href="#detalles" class="scroll-hint" aria-label="Bajar"></a>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="track" id="mq">
+  <span>Unidos todo podemos</span><span>Una Facultad más fuerte</span><span>Moderna</span><span>Unida</span><span>Claustro 2026</span><span>FICAM</span>
+</div></div>
+
+<!-- ============ DETAILS ============ -->
+<section id="detalles"><div class="wrap">
+  <div class="sec-k rv">La noche</div>
+  <h2 class="sec-t split">Una velada para compartir y construir juntos</h2>
+  <div class="orn rv"><i></i><span></span><i></i></div>
+  <div class="details">
+    <div class="det rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></div>
+      <small>Fecha</small><b>Martes 3</b><p>de noviembre de 2026</p></div>
+    <div class="det rv" style="--d:.12s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+      <small>Hora</small><b>19:00</b><p>Le esperamos puntualmente</p></div>
+    <div class="det rv" style="--d:.24s"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21h16M6 21V8l6-4 6 4v13M10 21v-5h4v5"/></svg></div>
+      <small>Lugar</small><b>Bizantino</b><p>Restaurant del Grand Hotel</p></div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap quote">
+  <p class="q split">“Compartir propuestas, escuchar de cerca sus inquietudes y consolidar juntos la visión de una <em>Facultad más fuerte, moderna y unida</em>.”</p>
+  <div class="by rv">Frente UTP · Unidos Todo Podemos</div>
+</div></section>
+
+<!-- ============ PLACE ============ -->
+<section id="lugar"><div class="wrap">
+  <div class="sec-k rv">Ubicación</div>
+  <h2 class="sec-t split">¿Dónde nos encontramos?</h2>
+  <div class="place">
+    <div class="info rv">
+      <h3 class="foil">Restaurant Bizantino del Grand Hotel</h3>
+      <div class="row"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+        <div>Calle Aniceto Arce N° 61, a media cuadra de la Plaza 25 de Mayo · Sucre</div></div>
+      <div class="row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <div>Martes 3 de noviembre · 19:00</div></div>
+      <div class="btns">
+        <a class="btn primary" href="https://maps.app.goo.gl/tk64wmaX5oApRNy97" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Abrir en Google Maps</a>
+        <button class="btn" id="shareBtn" style="display:none">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>Compartir</button>
+      </div>
+    </div>
+    <div class="map rv" style="--d:.15s"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa del lugar"
+      src="https://www.google.com/maps?q=Bizantino+RestoBar,+Aniceto+Arce+61,+Sucre,+Bolivia&z=17&output=embed"></iframe></div>
+  </div>
+</div></section>
+
+<!-- ============ TEAM ============ -->
+<section id="candidatos" class="alt"><div class="wrap">
+  <div class="sec-k rv">Frente UTP</div>
+  <h2 class="sec-t split">Le esperan nuestros candidatos</h2>
+  <div class="team">
+    <div class="cand rv"><div class="ph"><img src="img/jose.webp" alt="Ing. José Heredia Pardo" loading="lazy"></div>
+      <div class="bd"><h3>Ing. José Heredia Pardo</h3><span class="role">Director Ing. Mecánica</span>
+      <a class="btn" href="pdf/jose-heredia-director-mecanica.pdf" target="_blank">Ver propuestas</a></div></div>
+    <div class="cand dec rv" style="--d:.12s"><div class="ph"><img src="img/german.webp" alt="Ing. Germán Palacios Márquez" loading="lazy"></div>
+      <div class="bd"><h3>Ing. Germán Palacios Márquez</h3><span class="role">Decano</span>
+      <a class="btn primary" href="pdf/german-palacios-decano.pdf" target="_blank">Ver propuestas</a></div></div>
+    <div class="cand rv" style="--d:.24s"><div class="ph"><img src="img/marco.webp" alt="Ing. Marco A. Montalvo Rodríguez" loading="lazy"></div>
+      <div class="bd"><h3>Ing. Marco A. Montalvo Rodríguez</h3><span class="role">Dir. Electrónica, Mecatrónica y Biomédica</span>
+      <a class="btn" href="pdf/marco-montalvo-director-bmd-etn-mct.pdf" target="_blank">Ver propuestas</a></div></div>
+  </div>
+</div></section>
+
+<!-- ============ DOWNLOADS ============ -->
+<section id="descargas"><div class="wrap">
+  <div class="sec-k rv">Todo en un solo lugar</div>
+  <h2 class="sec-t split">Descargas</h2>
+  <div class="dl">
+    <a class="rv mine" id="dlMine" href="invitacion.png" download="Invitacion-Cena-UTP.png" style="display:none"><span class="ic">★</span><span><b>Mi invitación personal</b><small>Imagen en alta calidad</small></span></a>
+    <a class="rv" href="invitacion.png" download="Invitacion-Cena-UTP.png"><span class="ic">PNG</span><span><b>Invitación digital</b><small>Para compartir</small></span></a>
+    <a class="rv" style="--d:.06s" href="evento.ics" download="Cena-UTP-3-nov.ics"><span class="ic">ICS</span><span><b>Recordatorio</b><small>Agregar al calendario</small></span></a>
+    <a class="rv" style="--d:.12s" href="pdf/german-palacios-decano.pdf" download><span class="ic">PDF</span><span><b>Plan de trabajo · Decano</b><small>Ing. Germán Palacios</small></span></a>
+    <a class="rv" style="--d:.18s" href="pdf/jose-heredia-director-mecanica.pdf" download><span class="ic">PDF</span><span><b>Plan · Dir. Mecánica</b><small>Ing. José Heredia</small></span></a>
+    <a class="rv" style="--d:.24s" href="pdf/marco-montalvo-director-bmd-etn-mct.pdf" download><span class="ic">PDF</span><span><b>Plan · Dir. ETN · MCT · BMD</b><small>Ing. Marco Montalvo</small></span></a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <img src="img/logo-700.png" alt="UTP">
+  <div class="slogan">Unidos todo podemos</div>
+  Claustro Universitario 2026 · Facultad de Ingeniería Mecánica, Eléctrica y Electrónica · USFX
+</div></footer>
+
+<div class="mbar" id="mbar">
+  <a href="https://maps.app.goo.gl/tk64wmaX5oApRNy97" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8 2 5 5.1 5 9c0 5.3 7 13 7 13s7-7.7 7-13c0-3.9-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>GPS</a>
+  <a href="evento.ics" download="Cena-UTP-3-nov.ics"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>Agendar</a>
+  <a id="mbInv" href="invitacion.png" download="Invitacion-Cena-UTP.png"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>Invitación</a>
+  <a href="#candidatos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><path d="M2 21c0-4 3-6.5 7-6.5s7 2.5 7 6.5M16 4.5a3.5 3.5 0 0 1 0 7M18 14.6c2.4.6 4 2.6 4 6.4"/></svg>Candidatos</a>
+</div>
+
+<script>
+(()=>{
+const $=id=>document.getElementById(id);
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const INV=window.INV;
+
+/* ---------- personalización ---------- */
+if(INV){
+  const full=INV.nombre;
+  $('iFor').textContent=INV.genero==='F'?'Una invitación especial para la':'Una invitación especial para el';
+  $('iWho').textContent=full;
+  if(INV.foto){$('iAv').src=INV.foto;$('iAv').style.display='block'}
+  $('hello').style.display='block';
+  $('hSal').textContent=(INV.genero==='F'?'Estimada colega docente':'Estimado colega docente');
+  $('hName').textContent=full;
+  $('hKick').textContent='Invitación personal · Nº '+String(INV.numero).padStart(3,'0');
+  $('invImg').src=INV.img;
+  for(const a of [$('dlInv'),$('mbInv'),$('dlMine')]){a.href=INV.img;a.download='Mi-invitacion-Cena-UTP.png'}
+  $('dlInvT').textContent='Mi invitación';
+  $('dlMine').style.display='flex';
+  document.title=full+' · Invitación Especial UTP';
+}
+// palabras del nombre (intro) para animarlas
+const who=$('iWho');who.innerHTML=who.textContent.split(' ').map((w,i)=>`<span style="transition-delay:${.15+i*.12}s">${w}</span>`).join(' ');
+
+/* ---------- polvo dorado ---------- */
+function dust(cv,n){
+  const c=cv.getContext('2d');let W,H,P=[];const dpr=Math.min(devicePixelRatio||1,2);
+  function rs(){W=cv.width=cv.offsetWidth*dpr;H=cv.height=cv.offsetHeight*dpr}
+  rs();addEventListener('resize',rs);
+  for(let i=0;i<n;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*1.6+.3,v:Math.random()*.00025+.00006,a:Math.random()*Math.PI*2,s:Math.random()*.02+.005});
+  let run=true;
+  (function f(){ if(!run)return; c.clearRect(0,0,W,H);
+    for(const p of P){p.y-=p.v;p.a+=p.s;if(p.y<-.02){p.y=1.02;p.x=Math.random()}
+      const al=.35+.35*Math.sin(p.a);c.beginPath();c.arc(p.x*W+Math.sin(p.a)*6,p.y*H,p.r*dpr,0,7);c.fillStyle=`rgba(247,227,163,${al})`;c.fill()}
+    requestAnimationFrame(f)})();
+  return ()=>run=false;
+}
+const area=innerWidth*innerHeight;
+const stopIntro=RM?()=>{}:dust($('introDust'),Math.min(120,area/9000|0));
+if(!RM)dust($('dust'),Math.min(90,area/14000|0));
+
+/* ---------- intro ---------- */
+const intro=$('intro'),stage=$('stage');let ended=false;
+function endIntro(){ if(ended)return;ended=true;
+  intro.classList.add('bye');document.body.classList.remove('locked');
+  setTimeout(()=>{intro.classList.add('gone');stopIntro()},1300);
+  sessionStorage.setItem('utp_intro','1');reveal();
+}
+function openEnv(){ if(stage.classList.contains('open'))return;
+  stage.classList.add('open');navigator.vibrate&&navigator.vibrate(18);setTimeout(endIntro,1500) }
+$('seal').onclick=openEnv;$('env').onclick=openEnv;$('skip').onclick=endIntro;
+if(RM||/[?&]intro=0/.test(location.search)||sessionStorage.getItem('utp_intro')&&!INV){ intro.classList.add('gone');document.body.classList.remove('locked');ended=true; }
+else{
+  const T=[[150,'s1'],[900,'s2'],[2000,'s3'],[3300,'s4']];
+  T.forEach(([t,c])=>setTimeout(()=>stage.classList.add(c),t));
+}
+
+/* ---------- reveal ---------- */
+document.querySelectorAll('.split').forEach(el=>{
+  let i=0;const walk=n=>{[...n.childNodes].forEach(ch=>{
+    if(ch.nodeType===3){const frag=document.createDocumentFragment();
+      ch.textContent.split(/(\s+)/).forEach(w=>{if(!w)return;if(/^\s+$/.test(w)){frag.append(w);return}
+        const s=document.createElement('span');s.className='w';s.innerHTML=`<span style="--i:${i++}">${w}</span>`;frag.append(s)});
+      ch.replaceWith(frag)}else walk(ch)})};walk(el)});
+function reveal(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.rv,.split').forEach(el=>io.observe(el));
+}
+if(ended)reveal();
+
+/* ---------- nav / menú / barra móvil ---------- */
+const nav=$('nav'),mbar=$('mbar');
+addEventListener('scroll',()=>{const y=scrollY;nav.classList.toggle('solid',y>30);mbar.classList.toggle('show',y>innerHeight*.6)},{passive:true});
+$('burger').onclick=()=>document.body.classList.toggle('menu-open');
+document.querySelectorAll('#drawer a').forEach(a=>a.onclick=()=>document.body.classList.remove('menu-open'));
+
+/* ---------- cuenta regresiva ---------- */
+const T0=new Date('2026-11-03T19:00:00-04:00').getTime();const prev={};
+function tick(){
+  let s=Math.floor((T0-Date.now())/1000);
+  if(s<=0){$('count').style.display='none';$('countMsg').style.display='block';return}
+  const z=n=>String(n).padStart(2,'0');
+  const v={cd:Math.floor(s/86400),ch:z(Math.floor(s%86400/3600)),cm:z(Math.floor(s%3600/60)),cs:z(s%60)};
+  for(const k in v){if(prev[k]!==v[k]){const el=$(k);el.textContent=v[k];el.classList.remove('tick');void el.offsetWidth;el.classList.add('tick');prev[k]=v[k]}}
+}
+tick();setInterval(tick,1000);
+
+/* ---------- tarjeta 3D ---------- */
+const c3=$('card3d'),ci=$('cardIn');
+if(matchMedia('(pointer:fine)').matches&&!RM){
+  c3.addEventListener('mousemove',e=>{const r=c3.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    ci.style.transform=`rotateY(${(x-.5)*16}deg) rotateX(${(.5-y)*14}deg)`;ci.style.animation='none';
+    ci.style.setProperty('--gx',x*100+'%');ci.style.setProperty('--gy',y*100+'%')});
+  c3.addEventListener('mouseleave',()=>{ci.style.transform='';ci.style.animation=''});
+  const g=$('glow');addEventListener('mousemove',e=>{g.style.transform=`translate(${e.clientX}px,${e.clientY}px)`},{passive:true});
+}
+
+/* ---------- marquesina infinita ---------- */
+const mq=$('mq');mq.innerHTML+=mq.innerHTML;
+
+/* ---------- compartir ---------- */
+if(navigator.share){const b=$('shareBtn');b.style.display='inline-flex';
+  b.onclick=()=>navigator.share({title:'Cena de Confraternización Docente UTP',text:'Martes 3 de noviembre · 19:00 · Restaurant Bizantino del Grand Hotel',url:location.origin+location.pathname.replace(/[^/]*$/,'')}).catch(()=>{})}
+})();
+</script>
+</body>
+</html>
